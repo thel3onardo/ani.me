@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         blue: {
-          500: '#DA2535'
+          500: '#00A3FF'
         },
         white: '#F9F9F9',
         grey: {
@@ -17,7 +17,7 @@ module.exports = {
         }
       },
       fontFamily: {
-        'rubik': ["Rubik", sans-serif]
+        'rubik': ["Rubik", 'sans-serif']
       }
     },
   },
