@@ -9,7 +9,7 @@
     import '../app.css';
 </script>
 
-<div class="bg-dark-900">
+<div class="bg-dark-950 min-h-screen">
     <div class="w-full max-w-[1228px] mx-auto">
         <slot />
     </div>
