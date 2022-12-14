@@ -2,7 +2,24 @@
 module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        blue: {
+          500: '#DA2535'
+        },
+        white: '#F9F9F9',
+        grey: {
+          200: '#BFBFBF'
+        },
+        dark: {
+          700: '#515151',
+          900: '#0B1421'
+        }
+      },
+      fontFamily: {
+        'rubik': ["Rubik", sans-serif]
+      }
+    },
   },
   plugins: [],
 }

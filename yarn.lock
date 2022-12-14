@@ -856,6 +856,16 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.16.5.tgz#9398d079a83b309b44021634ae6b4f7bc6a0cad0"
   integrity sha512-q00Jasz6/wCOD2XxRj4GEwj27u1zfpiBniL1ip3/YGGcYtvOoGKCNSS47sufO/8ixEgrSYDlkglSd6CxcS7m0g==
 
+"@fontsource/inter@^4.5.14":
+  version "4.5.14"
+  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.5.14.tgz#3944b809aa7bf27dacd20bdc04a49fb738959724"
+  integrity sha512-JDC9AocdPLuGsASkvWw9hS5gtHE7K9dOwL98XLrk5yjYqxy4uVnScG58NUvFMJDVJRl/7c8Wnap6PEs+7Zvj1Q==
+
+"@fontsource/rubik@^4.5.13":
+  version "4.5.13"
+  resolved "https://registry.yarnpkg.com/@fontsource/rubik/-/rubik-4.5.13.tgz#c390b7197e893d5dfeb67dfa76cf68f7c9203442"
+  integrity sha512-oykfZOFcr+yHiCisHEbX9byVhr7dH4V0XvUSTFZt6xk1Qx+3FFyi8iV4iy/aiKLJOFfgfN6aPMtgifGR6hvIUA==
+
 "@jridgewell/resolve-uri@3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@jridgewell/resolve-uri/-/resolve-uri-3.1.0.tgz#2203b118c157721addfe69d47b70465463066d78"

@@ -24,6 +24,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fontsource/inter": "^4.5.14",
+		"@fontsource/rubik": "^4.5.13",
 		"mongodb": "^4.12.1"
 	}
 }
