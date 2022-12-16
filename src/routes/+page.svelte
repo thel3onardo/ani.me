@@ -3,6 +3,7 @@
     import SectionLayout from '$lib/components/SectionLayout.svelte'
     import HeaderPoster from '$lib/components/HeaderPoster.svelte'
     import AnimePoster from '$lib/components/AnimePoster.svelte'
+    import AlphabeticalFilter from '$lib/components/AlphabeticalFilter.svelte'
 
     let animeList = [
         {
@@ -64,6 +65,7 @@
 </svelte:head>
 
 <Navbar />
+<AlphabeticalFilter />
 
 <main class="w-full flex flex-col">
     <SectionLayout
