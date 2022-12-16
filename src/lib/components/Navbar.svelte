@@ -1,13 +1,35 @@
 <script lang="ts">
+    import { page } from '$app/stores'
+
     import SearchBar from './SearchBar.svelte'
     import NavbarUserProfile from './Navbar/NavbarUserProfile.svelte'
     import Icon from '@iconify/svelte/'
 
     let navItems = [
-        { id: 1, label: 'Início', href: '/' },
-        { id: 2, label: 'Lista', href: '/list' },
-        { id: 2, label: 'Gêneros', href: '/genres' },
-        { id: 2, label: 'Novos episódios', href: '/new-episodes' },
+        {
+            id: 1,
+            label: 'Início',
+            href: '/',
+            active: $page?.url?.pathname === '/',
+        },
+        {
+            id: 2,
+            label: 'Lista',
+            href: '/list',
+            active: $page?.url?.pathname === '/list',
+        },
+        {
+            id: 2,
+            label: 'Gêneros',
+            href: '/genres',
+            active: $page?.url?.pathname === '/genres',
+        },
+        {
+            id: 2,
+            label: 'Novos episódios',
+            href: '/new-episodes',
+            active: $page?.url?.pathname === '/new-episodes',
+        },
     ]
     let userProfileVisible: boolean = false
 
@@ -23,6 +45,7 @@
             {#each navItems as item}
             <li
                 class="font-medium mr-12 text-lg cursor-pointer hover:text-blue-500 transition"
+                class:text-blue-500="{item.active}"
             >
                 <a href="{item.href}">{item.label}</a>
             </li>
