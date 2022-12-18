@@ -3,7 +3,6 @@
 
     import SearchBar from './SearchBar.svelte'
     import NavbarUserProfile from './Navbar/NavbarUserProfile.svelte'
-    import Icon from '@iconify/svelte/'
 
     let navItems = [
         {
@@ -31,11 +30,6 @@
             active: $page?.url?.pathname === '/new-episodes',
         },
     ]
-    let userProfileVisible: boolean = false
-
-    function toggleUserProfile() {
-        userProfileVisible = !userProfileVisible
-    }
 </script>
 
 <header class="flex items-center justify-between py-12">
@@ -52,18 +46,6 @@
             {/each}
         </ul>
         <SearchBar />
-        <div class="relative">
-            <div on:click="{toggleUserProfile}">
-                <Icon
-                    icon="ph:user-light"
-                    class="text-white ml-5 cursor-pointer hover:text-blue-500 transition"
-                    width="2rem"
-                />
-            </div>
-
-            {#if userProfileVisible}
-            <NavbarUserProfile />
-            {/if}
-        </div>
+        <NavbarUserProfile />
     </div>
 </header>
