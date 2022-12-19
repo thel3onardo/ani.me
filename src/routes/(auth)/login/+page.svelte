@@ -1,5 +1,4 @@
 <script lang="ts">
-    import image from '$lib/assets/login-image.png'
     import FormInput from '$lib/components/FormInput.svelte'
     import ButtonComponent from '$lib/components/Button.svelte'
 </script>
