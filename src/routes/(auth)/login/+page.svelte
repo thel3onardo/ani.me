@@ -1,6 +1,12 @@
 <script lang="ts">
     import FormInput from '$lib/components/FormInput.svelte'
     import ButtonComponent from '$lib/components/Button.svelte'
+
+    let loadingBtn = false
+
+    function toggleLoading() {
+        loadingBtn = !loadingBtn
+    }
 </script>
 
 <div class="relative">
@@ -30,7 +36,13 @@
         />
 
         <div class="w-full mt-4">
-            <ButtonComponent background block>Logar</ButtonComponent>
+            <ButtonComponent
+                on:click="{toggleLoading}"
+                loading="{loadingBtn}"
+                background
+                block
+                >Logar</ButtonComponent
+            >
         </div>
     </div>
 </div>
