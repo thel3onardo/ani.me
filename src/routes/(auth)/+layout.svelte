@@ -1,3 +1,3 @@
-<div class="min-h-screen w-full bg-red-500">
+<div class="min-h-screen w-full bg-dark-950 flex items-center justify-center">
     <slot />
 </div>
