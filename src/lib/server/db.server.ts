@@ -3,6 +3,8 @@ import { env } from '$env/dynamic/private'
 
 const client = new MongoClient(env.SECRET_MONGO_URI)
 
-await client.connect()
+client.connect().then(() => {
+    console.log(`connected to db in port ${env.SECRET_MONGO_URI}`)
+})
 
 export default client.db('test')
