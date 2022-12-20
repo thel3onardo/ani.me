@@ -1,5 +1,5 @@
 import { json } from '@sveltejs/kit'
-import { connectDb } from '$lib/server/connectDb.server'
+import { connectDb } from '$lib/server/database/database.server'
 
 /** @type {import('./$types').RequestHandler} */
 export async function POST({ url, request }) {

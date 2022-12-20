@@ -2,7 +2,7 @@ import {
     insertAnime,
     getAnime,
 } from '$lib/server/modules/anime/animeController'
-import { connectDb } from '$lib/server/connectDb.server'
+import { connectDb } from '$lib/server/database/database.server'
 
 export async function POST({ url, request }) {
     await connectDb()
