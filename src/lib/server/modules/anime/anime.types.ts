@@ -1,4 +1,4 @@
-export interface AnimeBody {
-    name: string
-    description: string
+export interface IAnimeBody {
+    name?: string
+    description?: string
 }

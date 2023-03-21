@@ -1,17 +1,42 @@
-import {
-    insertAnime,
-    getAnime,
-} from '$lib/server/modules/anime/animeController'
-import { connectDb } from '$lib/server/database/database.server'
+import { error, json } from '@sveltejs/kit'
+import { animes } from '$db/mongo'
+import type { IAnimeBody } from '$lib/server/modules/anime/anime.types'
 
 export async function POST({ url, request }) {
-    await connectDb()
+    if (!request.body)
+        throw error(500, 'Missing fields name and description in body data')
 
-    return insertAnime(await request.json())
+    try {
+        const { name, description }: IAnimeBody = await request.json()
+
+        await animes.create({ name, description })
+
+        return json({
+            status: 401,
+            body: 'New anime inserted successfully',
+        })
+    } catch (err: any) {
+        return json({
+            status: 500,
+            error: err?.message,
+        })
+    }
 }
 
 export async function GET({ url, request }) {
-    await connectDb()
+    try {
+        const anime = await animes.find({})
 
-    return getAnime()
+        return json({
+            status: 200,
+            body: {
+                data: anime,
+            },
+        })
+    } catch (err: any) {
+        return json({
+            status: 500,
+            error: err,
+        })
+    }
 }

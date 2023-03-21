@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 interface IAnime {
     name: string
     description: string
-    created_at: any
+    createdAt: Date
 }
 
 const animeSchema = new mongoose.Schema<IAnime>({
@@ -16,7 +16,7 @@ const animeSchema = new mongoose.Schema<IAnime>({
         required: true,
     },
     //should I really use kebac-case here?
-    created_at: {
+    createdAt: {
         type: Date,
         default: Date.now,
     },

@@ -10,4 +10,8 @@ export const connectDb = (): void => {
                 `Something went wrong when trying to connect to db: ${err}`
             )
         )
+
+    mongoose.connection.on('disconnect', () =>
+        console.log('Disconnected from db')
+    )
 }
